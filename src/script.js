@@ -3,20 +3,6 @@ import './style.css';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function createFooter() {
     const footer = document.createElement('footer');
     footer.classList.add('attribution');

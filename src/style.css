@@ -1,6 +1,134 @@
-.Title {
-    color: red;
+* {
+    box-sizing: border-box;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.imageContainer {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 80vw;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.rightHeader {
+    /* border: 1px solid blue; */
+    height: 100%;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 20px;
+}
+
+.rightHeader > #navPanel {
+    display: flex;
+    gap: 20px;
+}
+
+.leftHeader {
+    /* border: 1px solid red; */
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+.leftHeader > .cart {
+    /* border: 1px solid blue; */
+    width: 22px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftHeader > .userProfile {
+    /* border: 1px solid blue; */
+    width: 40px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+}
+
+.leftHeader > .userProfile > img,
+.leftHeader > .cart > img {
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* Begin Main Content */
+
+#content {
+    width: 80vw;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+}
+
+#content > .productPicture  {
+    width: 395px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#content > .productPicture > .L {
+    width: 395px;
+    height: 395px;
+}
+
+#content .additionalProductPicture {
+    display: flex;
+    justify-content: space-between;
+}
+
+#content .productThumbnail {
+    width: 80px;
+    height: 80px;
+}
+
+#content > .productPicture > .L > img,
+#content .productThumbnail > img  {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#content > .productDescription {
+    width: 395px;
+    margin-right: 80px;
+}
+
+
+
+
+
+
+
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
