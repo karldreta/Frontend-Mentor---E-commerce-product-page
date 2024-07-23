@@ -5,14 +5,30 @@
     font-style: normal;
   }
 
-* {
-    box-sizing: border-box;
-}
+:root {
+    /* Primary colors */
+    --color-orange: hsl(26, 100%, 55%);
+    --color-pale-orange: hsl(25, 100%, 94%);
 
-h1, h2, h3, p {
+    /* Neutral colors */
+    --color-very-dark-blue: hsl(220, 13%, 13%);
+    --color-dark-grayish-blue: hsl(219, 9%, 45%);
+    --color-grayish-blue: hsl(220, 14%, 75%);
+    --color-light-grayish-blue: hsl(223, 64%, 98%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-black-75-opacity: hsla(0, 0%, 0%, 0.75);
+}
+  
+
+*, h1, h2, h3, p, button {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
 }
+
 
 body {
     width: 100vw;
@@ -145,18 +161,24 @@ header {
 .productDescription > h2 {
     font-size: 40px;
     margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .productDescription > h3 {
     font-size: 13px;
-    color: gray;
+    color: var(--color-dark-grayish-blue);
     text-transform: uppercase;
     margin-top: 50px;
     margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
 }
 
 .productDescription > p {
     margin-bottom: 20px;
+    width: 430px;
+    text-align: start;
 }
 
 #content > .productDescription > .productPrice {
@@ -170,11 +192,13 @@ header {
 
 .productPrice > .rackPrice {
     font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
 }
 
 .productPrice > .discountOffer {
-    color: white;
-    background-color: black;
+    color: var(--color-white);
+    background-color: var(--color-black-75-opacity);
     border-radius: 5px;
     font-size: 16px;
     padding: 5px 9px;
@@ -183,7 +207,7 @@ header {
 #content > .productDescription > .previousPrice {
     font-size: 16px;
     text-decoration: line-through;
-    color: grey;
+    color: var(--color-dark-grayish-blue);
     margin: 0;
     margin-bottom: 25px;
 }
@@ -202,8 +226,8 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid grey;
-    background-color: white;
+    border: 1px solid var(--color-dark-grayish-blue);
+    background-color: var(--color-white);
     border-radius: 5px;
     gap: 5px;
 }
@@ -242,15 +266,27 @@ header {
     padding: 0;
 }
 
-
 #addToCart {
-    width: 230px;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 250px;
+    height: auto;
+    background-color: var(--color-orange);
+    color: var(--color-black-75-opacity);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    gap: 15px;
+    font-weight: 600;
+    font-family: 'projectFont';
+    font-size: 12px;
+  }
+
+#addToCart:hover {
+    background-color: var(--color-pale-orange);
 }
-
-
-
-
 
 
 
