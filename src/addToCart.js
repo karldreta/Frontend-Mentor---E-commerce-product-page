@@ -7,10 +7,12 @@ const cartCountInfo = document.querySelector('#cartCount');
 let cartCount = '';
 
 export default function addToCart() {
-
+    const number = document.querySelector('#number');
     if (controlQuantity() === 0) {
-        alert("Select quantity first");
+        number.style.opacity = '0.5';
         return
+    } else {
+        number.style.opacity = '1';
     }
 
     const productName = document.querySelector('.product-name').textContent;
@@ -66,13 +68,14 @@ export function controlQuantity() {
     minus.addEventListener('click', () => {
         if (!(productNum == 0)) {
             productNum--;
-            number.textContent = productNum; 
+            number.textContent = productNum;
         }
     });
     
     plus.addEventListener('click', () => {
         productNum++;
         number.textContent = productNum;
+        number.style.opacity = '1';
     });
 
     return productNum;
