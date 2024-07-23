@@ -18,7 +18,7 @@ export default function viewCart() {
         `;
         imageContainer.appendChild(tooltip);
     }
-    
+
     tooltip.classList.toggle('show');
 }
 
