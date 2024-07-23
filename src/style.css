@@ -333,8 +333,10 @@ header {
 /* Style for the tooltip */
 .tooltip {
     position: absolute;
-    width: 280px;
-    height: 300px;
+    width: 350px;
+    height: auto;
+    max-height: 300px;
+    overflow-y: auto;
     background-color: var(--color-white);
     color: black;
     box-shadow: 0px 1px 5px black;
@@ -363,6 +365,7 @@ header {
 
 .tooltip section {
     height: 100%;
+    padding: 5px 7px;
 }
 
 .tooltip button {
@@ -388,7 +391,41 @@ header {
     margin: 5px;
 }
 
+/* Below: View Cart */
 
+.productListItem {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 70px 1fr 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.productListItem .itemImgContainer {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.cartItemImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.productListItem .itemCartDescription {
+    width: max-content;
+    color: var(--color-dark-grayish-blue);
+}
+
+.productListItem strong {
+    color: black;
+}
+
+.productListItem .removeItem:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
 
 
 .attribution { font-size: 11px; text-align: center; margin-bottom: 5px; }
