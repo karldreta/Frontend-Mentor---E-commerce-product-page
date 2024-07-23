@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'projectFont';
-    src: url('./fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.woff') format('woff');
+    src: url('./fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.woff');
     font-weight: 400;
     font-style: normal;
   }
@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    font-family: 'projectFont' Arial, Helvetica, sans-serif;
+    font-family: 'projectFont', Arial, Helvetica, sans-serif;
 }
 
 .imageContainer {
@@ -116,6 +116,11 @@ header {
 #content .additionalProductPicture {
     display: flex;
     justify-content: space-between;
+}
+
+#content .additionalProductPicture img:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 #content .productThumbnail {
@@ -220,7 +225,7 @@ header {
 }
 
 #minus > img {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 #number {
