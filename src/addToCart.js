@@ -1,4 +1,5 @@
 import { addProductToTooltip } from './viewCart.js';
+import productImage from '../images/image-product-1.jpg';
 
 const addToCartBtn = document.querySelector('#addToCart');
 addToCartBtn.addEventListener('click', addToCart);
@@ -21,7 +22,7 @@ export default function addToCart() {
     const totalPrice = parseFloat(rackPrice.replace('$', '').trim()) * controlQuantity();
 
     const productHTML = `
-        <div class="itemImgContainer"><img src="../images/image-product-1.jpg" alt="Product Image" class='cartItemImage'></div>
+        <div class="itemImgContainer"><img src="${productImage}" alt="Product Image" class='cartItemImage'></div>
         <div class="itemCartDescription">
             <p class='productName'>${productName}</p>
             <p class='productPrice'>${rackPrice} x ${controlQuantity()} <strong>$${totalPrice.toFixed(2)}</strong></p>
