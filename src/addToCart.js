@@ -21,7 +21,7 @@ export default function addToCart() {
     const totalPrice = parseFloat(rackPrice.replace('$', '').trim()) * controlQuantity();
 
     const productHTML = `
-        <div class="itemImgContainer"><img src="/images/image-product-1.jpg" alt="Product Image" class='cartItemImage'></div>
+        <div class="itemImgContainer"><img src="../images/image-product-1.jpg" alt="Product Image" class='cartItemImage'></div>
         <div class="itemCartDescription">
             <p class='productName'>${productName}</p>
             <p class='productPrice'>${rackPrice} x ${controlQuantity()} <strong>$${totalPrice.toFixed(2)}</strong></p>
