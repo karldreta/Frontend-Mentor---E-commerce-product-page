@@ -1,13 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { Script } = require('vm');
 
 module.exports = {
   mode: 'development',
   entry: './src/script.js',
   output: {
-    filename: 'main.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -18,11 +18,6 @@ module.exports = {
       scriptLoading: 'defer',
     }),
   ],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-   clean: true,
-  },
   module: {
     rules: [
       {
@@ -36,6 +31,10 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.html$/i,
+        use: ['html-loader'],
       },
     ],
   },
