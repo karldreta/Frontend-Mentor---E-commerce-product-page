@@ -29,6 +29,7 @@ Users should be able to:
 - View the cart and remove items from it.
 
 ### Screenshot
+
 ![Screenshot](image.png)
 
 ### Links
@@ -50,17 +51,17 @@ Users should be able to:
 
 Taking on this challenge provided an in-depth understanding of [Webpack](https://webpack.js.org/) and ES6 Modules. Key learnings include:
 
-* Solid grasp of Webpack and its configuration
-* Enhanced skills in CSS, particularly using ::before and ::after pseudo-elements
-* Implementation of a shopping cart for an E-commerce project
-* Improved understanding of UX design principles
+- Solid grasp of Webpack and its configuration
+- Enhanced skills in CSS, particularly using ::before and ::after pseudo-elements
+- Implementation of a shopping cart for an E-commerce project
+- Improved understanding of UX design principles
 
 ### Continued development
 
 I plan to revisit this project after completing my current curriculum on [The Odin Project](https://www.theodinproject.com/). Future enhancements may include:
 
-* Improved mobile responsiveness
-* Implementing a carousel for image looping
+- Improved mobile responsiveness
+- Implementing a carousel for image looping
 
 ### Useful resources
 

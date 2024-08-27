@@ -1,7 +1,6 @@
-
 export default function createHeader() {
-    const header = document.createElement('header');
-    header.innerHTML = `
+  const header = document.createElement("header");
+  header.innerHTML = `
     <div class="rightHeader">
         <h1>sneakers</h1>
         <nav id="navPanel">
@@ -21,5 +20,5 @@ export default function createHeader() {
         </div>
     </div>
     `;
-    return header;
+  return header;
 }

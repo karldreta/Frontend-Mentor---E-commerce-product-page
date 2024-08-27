@@ -16,3 +16,5 @@
 .prettierignore
 
 # Ignore the md files for now, we'll edit those later
+node_modules
+dist
