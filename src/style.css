@@ -449,7 +449,7 @@ header {
 /* Below: Light box */
 
 #dialog {
-  position: absolute;
+  position: relative;
   width: 420px;
   height: auto;
   align-self: center;
@@ -505,6 +505,7 @@ header {
 #dialog::backdrop {
   background-color: black;
   opacity: 0.7;
+  z-index: 0;
 }
 
 .closeModal {
@@ -523,6 +524,43 @@ header {
 
 .closeModal *:hover {
   fill: var(--color-orange);
+}
+
+/* Style Carousel */
+.carouselBtns {
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateY(450%);
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.carouselBtns svg {
+  width: max-content;
+}
+.carouselBtns#previous {
+  left: 0px;
+  z-index: 10;
+}
+
+.carouselBtns#next {
+  right: 0;
+  z-index: 10;
+}
+
+.carouselBtns:hover {
+  background-color: whitesmoke;
+  opacity: .9;
+}
+
+.carouselBtns:active {
+  opacity: .7;
 }
 
 .attribution {
