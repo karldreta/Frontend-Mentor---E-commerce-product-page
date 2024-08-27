@@ -19,19 +19,9 @@ export default function expandThumbnail(e) {
   }
   dialog.showModal();
   pictureSlide();
-
-  // dialog.addEventListener("click", (e) => {
-  //   const dialogDimensions = dialog.getBoundingClientRect();
-  //   if (
-  //     e.clientX < dialogDimensions.left ||
-  //     e.clientX > dialogDimensions.right ||
-  //     e.clientY < dialogDimensions.top ||
-  //     e.clientY > dialogDimensions.bottom
-  //   ) {
-  //     dialog.close();
-  //   }
-  // });
 }
+
+// Closing the dialog
 
 const closeBtn = document.querySelector(".closeModal");
 closeBtn.addEventListener("click", closeModal);
@@ -47,15 +37,43 @@ function pictureSlide() {
   carouselImageContainer.innerHTML = `<img src="/images/image-product-${slideIndex}.jpg" />`;
 }
 
+// For the thumbnails inside the dialog
+const thumbnail = document.querySelectorAll(".productThumbnail.lightboxMode");
+thumbnail.forEach((thumbnail) =>
+  thumbnail.addEventListener("click", styleThumbnail),
+);
+
+function styleThumbnail(e) {
+  slideIndex = this.querySelector("img").dataset.pos;
+
+  thumbnail.forEach((thumbnail) => {
+    thumbnail.querySelector("img").classList.remove("active");
+  });
+  if (e.target.dataset.pos == slideIndex) {
+    e.target.classList.add("active");
+  }
+  pictureSlide();
+}
+
 const next = document.querySelector("#next");
 next.addEventListener("click", nextPicture);
 
-function nextPicture() {
+function nextPicture(e) {
   if (slideIndex < 4) {
     slideIndex++;
   } else {
     slideIndex = 1;
   }
+
+  let thumbnailPosition = 1;
+
+  thumbnail.forEach((thumbnail) => {
+    thumbnail.querySelector("img").classList.remove("active");
+    thumbnailPosition = thumbnail.querySelector("img").dataset.pos;
+    if (thumbnailPosition == slideIndex) {
+      thumbnail.querySelector("img").classList.add("active");
+    }
+  });
   pictureSlide(slideIndex);
 }
 
@@ -68,5 +86,14 @@ function previousPicture() {
   } else {
     slideIndex = 4;
   }
+  let thumbnailPosition = 1;
+
+  thumbnail.forEach((thumbnail) => {
+    thumbnail.querySelector("img").classList.remove("active");
+    thumbnailPosition = thumbnail.querySelector("img").dataset.pos;
+    if (thumbnailPosition == slideIndex) {
+      thumbnail.querySelector("img").classList.add("active");
+    }
+  });
   pictureSlide(slideIndex);
 }

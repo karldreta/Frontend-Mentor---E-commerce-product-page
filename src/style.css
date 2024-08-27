@@ -502,8 +502,11 @@ header {
 }
 
 .additionalProductPicture.lightboxMode img:hover {
-  border: 3px solid var(--color-orange);
   cursor: pointer;
+}
+
+.productThumbnail.lightboxMode .active {
+  border: 3px solid var(--color-orange);
 }
 
 #dialog .additionalProductPicture.lightboxMode img:active {
