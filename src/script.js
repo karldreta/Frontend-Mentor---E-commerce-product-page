@@ -1,4 +1,5 @@
 import "./style.css";
+import "./template.html";
 import createFooter from "./createFooter";
 import viewCart from "./viewCart";
 import addToCart from "./addToCart";

@@ -1,3 +1,8 @@
+import productImage1 from "../images/image-product-1.jpg";
+import productImage2 from "../images/image-product-2.jpg";
+import productImage3 from "../images/image-product-3.jpg";
+import productImage4 from "../images/image-product-4.jpg";
+
 document
   .querySelector("#productPicture")
   .addEventListener("click", expandThumbnail);
@@ -8,6 +13,7 @@ productThumbnail.forEach((thumbnail) =>
 );
 
 let slideIndex = 1;
+let image = document.createElement("img");
 
 export default function expandThumbnail(e) {
   const dialog = document.querySelector("#dialog");
@@ -34,7 +40,24 @@ function pictureSlide() {
   const carouselImageContainer = document.querySelector(
     "#carouselImageContainer",
   );
-  carouselImageContainer.innerHTML = `<img src="../images/image-product-${slideIndex}.jpg" />`;
+  switch (slideIndex) {
+    case 1:
+      image.src = productImage1;
+      break;
+    case 2:
+      image.src = productImage2;
+      break;
+    case 3:
+      image.src = productImage3;
+      break;
+    case 4:
+      image.src = productImage4;
+      break;
+    default:
+      image.src = productImage1;
+      break;
+  }
+  carouselImageContainer.appendChild(image);
 }
 
 // For the thumbnails inside the dialog
@@ -44,8 +67,7 @@ thumbnail.forEach((thumbnail) =>
 );
 
 function styleThumbnail(e) {
-  slideIndex = this.querySelector("img").dataset.pos;
-
+  slideIndex = parseInt(this.querySelector("img").dataset.pos); // Need to get an number value
   thumbnail.forEach((thumbnail) => {
     thumbnail.querySelector("img").classList.remove("active");
   });
