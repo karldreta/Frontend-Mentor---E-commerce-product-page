@@ -34,7 +34,7 @@ function pictureSlide() {
   const carouselImageContainer = document.querySelector(
     "#carouselImageContainer",
   );
-  carouselImageContainer.innerHTML = `<img src="/images/image-product-${slideIndex}.jpg" />`;
+  carouselImageContainer.innerHTML = `<img src="../images/image-product-${slideIndex}.jpg" />`;
 }
 
 // For the thumbnails inside the dialog
