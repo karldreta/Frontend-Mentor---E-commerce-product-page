@@ -1,3 +1,7 @@
+document
+  .querySelector("#productPicture")
+  .addEventListener("click", expandThumbnail);
+
 const productThumbnail = document.querySelectorAll(".productThumbnail");
 productThumbnail.forEach((thumbnail) =>
   thumbnail.addEventListener("click", expandThumbnail),

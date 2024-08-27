@@ -19,6 +19,24 @@
   --color-black-75-opacity: hsla(0, 0%, 0%, 0.75);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-pale-orange);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-orange);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
 *,
 h1,
 h2,
@@ -183,6 +201,7 @@ header {
 #content > .productPicture > .L {
   width: 395px;
   height: 395px;
+  cursor: pointer;
 }
 
 #content .additionalProductPicture {
