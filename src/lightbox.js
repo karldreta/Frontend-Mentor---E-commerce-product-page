@@ -26,3 +26,36 @@ closeBtn.addEventListener("click", closeModal);
 function closeModal() {
   dialog.close();
 }
+
+let slideIndex = 1;
+
+function pictureSlide() {
+  const carouselImageContainer = document.querySelector(
+    "#carouselImageContainer",
+  );
+  carouselImageContainer.innerHTML = `<img src="/images/image-product-${slideIndex}.jpg" />`;
+}
+
+const next = document.querySelector("#next");
+next.addEventListener("click", nextPicture);
+
+function nextPicture() {
+  if (slideIndex < 4) {
+    slideIndex++;
+  } else {
+    slideIndex = 1;
+  }
+  pictureSlide(slideIndex);
+}
+
+const previous = document.querySelector("#previous");
+previous.addEventListener("click", previousPicture);
+
+function previousPicture() {
+  if (slideIndex !== 1) {
+    slideIndex--;
+  } else {
+    slideIndex = 4;
+  }
+  pictureSlide(slideIndex);
+}

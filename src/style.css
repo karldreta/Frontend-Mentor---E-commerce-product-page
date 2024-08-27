@@ -364,7 +364,7 @@ header {
   transform: translateX(-50%) translateY(5%);
   white-space: nowrap;
   display: none;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .tooltip.show {
@@ -456,7 +456,7 @@ header {
   justify-self: center;
   gap: 20px;
   overflow: hidden;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .lightbox {
@@ -512,7 +512,7 @@ header {
   width: max-content;
   height: max-content;
   align-self: flex-end;
-  z-index: 100;
+  z-index: 10;
   margin-right: 5px;
   margin-bottom: 5px;
 }
@@ -556,11 +556,11 @@ header {
 
 .carouselBtns:hover {
   background-color: whitesmoke;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .carouselBtns:active {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .attribution {
