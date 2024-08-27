@@ -2,15 +2,20 @@ document
   .querySelector("#productPicture")
   .addEventListener("click", expandThumbnail);
 
-const productThumbnail = document.querySelectorAll(".productThumbnail");
+const productThumbnail = document.querySelectorAll(".initial-scale");
 productThumbnail.forEach((thumbnail) =>
   thumbnail.addEventListener("click", expandThumbnail),
 );
 
-export default function expandThumbnail() {
+
+let slideIndex = 1;
+
+export default function expandThumbnail(e) {
   const dialog = document.querySelector("#dialog");
   dialog.showModal();
-
+  slideIndex = e.target.dataset.pos;
+  pictureSlide();
+  
   dialog.addEventListener("click", (e) => {
     const dialogDimensions = dialog.getBoundingClientRect();
     if (
@@ -30,8 +35,6 @@ closeBtn.addEventListener("click", closeModal);
 function closeModal() {
   dialog.close();
 }
-
-let slideIndex = 1;
 
 function pictureSlide() {
   const carouselImageContainer = document.querySelector(

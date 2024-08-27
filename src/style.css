@@ -475,6 +475,7 @@ header {
   justify-self: center;
   gap: 20px;
   overflow: visible;
+  user-select: none;
 }
 
 .lightbox {
@@ -523,7 +524,7 @@ header {
 #dialog::backdrop {
   background-color: black;
   opacity: 0.7;
-  z-index: none;
+  z-index: 1;
 }
 
 .closeModal {
