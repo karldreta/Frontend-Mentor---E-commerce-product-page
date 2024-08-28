@@ -17,12 +17,16 @@ let image = document.createElement("img");
 
 export default function expandThumbnail(e) {
   const dialog = document.querySelector("#dialog");
+  thumbnail.forEach((thumbnail) => {
+    thumbnail.querySelector("img").classList.remove("active");
+  });
 
   if (e.target.dataset.pos <= 4 && e.target.dataset.pos !== 0) {
-    slideIndex = e.target.dataset.pos;
+    slideIndex = parseInt(e.target.dataset.pos);
   } else {
     slideIndex = 1;
   }
+
   dialog.showModal();
   pictureSlide();
 }
@@ -53,9 +57,9 @@ function pictureSlide() {
     case 4:
       image.src = productImage4;
       break;
-    default:
-      image.src = productImage1;
-      break;
+    // default:
+    //   image.src = productImage1;
+    //   break;
   }
   carouselImageContainer.appendChild(image);
 }
