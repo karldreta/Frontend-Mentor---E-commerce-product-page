@@ -18,8 +18,35 @@ export default function viewCart() {
         `;
     imageContainer.appendChild(tooltip);
   }
-
   tooltip.classList.toggle("show");
+
+  const checkout = document.querySelector("#checkout");
+  checkout.addEventListener("click", () => {
+    const productList = document.querySelector("#productList");
+    const alertModal = document.createElement("dialog");
+    alertModal.classList.add("alertModal");
+    const alert = document.createElement("p");
+    alertModal.appendChild(alert);
+    document.body.appendChild(alertModal);
+    if (productList.innerHTML != "") {
+      alert.textContent = `Order Placed!`;
+      alertModal.showModal();
+    } else {
+      alert.textContent = `Cart Empty!`;
+      alertModal.showModal();
+    }
+    alertModal.addEventListener("click", (e) => {
+      const dialogDimensions = alertModal.getBoundingClientRect();
+      if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+      ) {
+        alertModal.close();
+      }
+    });
+  });
 }
 
 export function addProductToTooltip(productHTML) {

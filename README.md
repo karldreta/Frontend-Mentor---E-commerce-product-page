@@ -61,7 +61,7 @@ Taking on this challenge provided an in-depth understanding of [Webpack](https:/
 I plan to revisit this project after completing my current curriculum on [The Odin Project](https://www.theodinproject.com/). Future enhancements may include:
 
 - Improved mobile responsiveness
-- Implementing a carousel for image looping
+- Implementing a carousel for image looping -- Added on **28 AUG 2024**
 
 ### Useful resources
 
